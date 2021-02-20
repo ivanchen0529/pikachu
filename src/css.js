@@ -1,11 +1,10 @@
-*{box-sizing: border-box;margin:0;padding: 0;}
-* ::before, * ::after{box-sizing: border-box;}
-body{
-    background: #ffe600;
-    min-height: 100vh;
-}
+// 模块化
+const string = `.skin *{box-sizing: border-box;margin:0;padding: 0;}
+.skin * ::before, .skin * ::after{box-sizing: border-box;}
 .skin{
     position: relative;
+    background: #ffe600;
+    min-height: 50vh;
 }
 .nose{
     border: 10px solid red;
@@ -23,16 +22,16 @@ body{
 @keyframes wave{
     0%{
         transform: rotate(0deg);
-    }
+}
     33%{
         transform: rotate(5deg);
-    }
+}
     66%{
         transform: rotate(-5deg);
-    }
+}
     100%{
         transform: rotate(0deg);
-    }
+}
 }
 .nose:hover{
     transform-origin: center bottom;
@@ -196,4 +195,5 @@ body{
     transform: translateX(180px);
     background: #ff0000;
     border-radius: 50%;
-}
+}`
+export default string
